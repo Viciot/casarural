@@ -13,14 +13,21 @@ import {
   Route 
 } from "react-router-dom";
 
+
+import Navbar from "./components/Navbar";
+
+
+
 function App() {
   return (
       <>
+        <Navbar />
         <Routes>
-                <Route exact path="/" element={<Home />} />
-                <Route exact path="/rooms/" element={<Rooms />} />
-                <Route exact path="/rooms/:slug" element={<SingleRoom />} />  
+                <Route path="/" element={<Home />} />
+                <Route path="/rooms/" element={<Rooms />} />
+                <Route path="/rooms/:slug" element={<SingleRoom />} />  
                 {/* slug is a cappuccino name */}
+                <Route path="*" element={<ErrorPage />} />
         </Routes>
         
       </>
