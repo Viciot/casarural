@@ -10,7 +10,7 @@ export default class Navbar extends Component {
     isOpen:false
   }
   
-  // si te acercas a la barra cambias el state a "no falso que esta abierto"
+  // si te acercas a la barra cambias el state a "no es falso que está abierto"
   handleToggle = () => {
     this.setState({isOpen:!this.state.isOpen})
   }
@@ -18,10 +18,11 @@ export default class Navbar extends Component {
     return (
       <nav className="navbar">
         <div className="nav-center">
-        <div className="nav-header">
-
-
-        </div>
+            <div className="nav-header">
+                <Link to="/">
+                    <img src={logo} alt="Beach Resort" />
+                </Link>
+            </div>
         </div>
       </nav>
     )

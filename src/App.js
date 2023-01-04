@@ -10,7 +10,8 @@ import ErrorPage from "./pages/ErrorPage";
 import { 
   BrowserRouter,
   Routes,
-  Route 
+  Route,
+  Link 
 } from "react-router-dom";
 
 
