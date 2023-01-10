@@ -10,10 +10,11 @@ export default function Home () {
             <Hero>
                 <Banner title="Experimenta lo natural" subtitle="Residencias completas a partir de 199€">
                     <Link to="/rooms" className="btn-primary">
-                        Nuestras Residencias
+                        Nuestros Alojamientos
                     </Link>
                 </Banner>
             </Hero>
+            <Services/>
         </>
     );
 }

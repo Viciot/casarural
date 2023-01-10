@@ -28,10 +28,10 @@ export default class Navbar extends Component {
             </div>
             <ul className={this.state.isOpen ? "nav-links show-nav":"nav-links"}>
                 <li>
-                    <Link to="/">Home</Link>
+                    <Link to="/">Inicio</Link>
                 </li>
                 <li>
-                    <Link to="/rooms">Rooms</Link>
+                    <Link to="/rooms">Alojamientos</Link>
                 </li>
             </ul>
         </div>
