@@ -24,7 +24,8 @@ export default function Room({room}) {
 }
 
 
-//No entiendo muy bien la necesidad de este trozo, pq idicamos el tipo de datos?
+//No entiendo muy bien la necesidad de este trozo, pq idicamos el tipo de datos? 
+//-> creo que es para bajar los props a traves del componente Room
 Room.propTypes = {
   room:PropTypes.shape({
     name:PropTypes.string.isRequired,
