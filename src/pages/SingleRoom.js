@@ -26,9 +26,9 @@ export default function SingleRoom() {
   //este trozo y el de arriba, los he sacado de un comentario del tutorial, en el inspector de codigo/components veo que los props vienen llenos de info
   if (!room){
     return <div className='error'>
-      <h3>no such room could be found</h3>
+      <h3>El alojamiento no existe</h3>
       <Link to='/rooms' className='btn-primary'>
-        back to rooms
+        Volver atrás
       </Link>
     </div>
   }
@@ -36,10 +36,10 @@ export default function SingleRoom() {
   const {name, description, capacity, size, price, extras, breakfast, pets, images} = room;
 
   return (
-    <Hero hero='roomsHero'>
+    <Hero hero='roomsHero'>      
       <Banner title={`${name} room`}>
         <Link to="/rooms" className='btn-primary'>
-          back to rooms
+          Volver a los alojamientos
         </Link>
       </Banner>
     </Hero>
