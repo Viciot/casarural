@@ -60,5 +60,13 @@ getRoom = (slug) => {
 
 const RoomConsumer = RoomContext.Consumer;
 
+//Esto es un higher order component... ni guarra vamos, pero gracias a esto envias los datos a traves del roomConsumer con el value
+export function withRoomConsumer (Component){
+  return function ConsumerWrapper(props){
+    return <RoomConsumer>
+      {value => <Component {...props} context={value}/>}
+    </RoomConsumer>
+  }
+}
 
 export{RoomProvider, RoomConsumer, RoomContext}
