@@ -7,9 +7,9 @@ import { Link } from 'react-router-dom'
 const Rooms = () => {
   return (
     <Hero hero="roomsHero">
-      <Banner title="Nuestros alojamientos">
+      <Banner title="Alojamientos">
         <Link to="/" className="btn-primary">
-          Volver
+          Ir al inicio
         </Link>
       </Banner>
     </Hero>

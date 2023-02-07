@@ -5,7 +5,7 @@ import Banner from "../components/Banner";
 
 import {Link, useParams} from "react-router-dom";
 import {RoomContext} from "../context";
-
+import StyledHero from "../components/StyledHero";
 
 
 
@@ -35,13 +35,50 @@ export default function SingleRoom() {
 
   const {name, description, capacity, size, price, extras, breakfast, pets, images} = room;
 
+  const [mainImg,...defaultImg] = images;
+  console.log(defaultImg);
+
   return (
-    <Hero hero='roomsHero'>      
+    <>
+    <StyledHero img ={mainImg || this.sate.defaultBcg}>      
       <Banner title={`${name} room`}>
         <Link to="/rooms" className='btn-primary'>
           Volver a los alojamientos
         </Link>
       </Banner>
-    </Hero>
+    </StyledHero>
+    <section className="single-room">
+      <div className="single-room-images">
+      {defaultImg.map((item,index)=>{
+        return <img key={index} src={item} alt={name} />
+      })}
+      </div>
+      <div className="single-room-info">
+        <article className="desc">
+          <h3>Descripción</h3>
+          <p>{description}</p>
+        </article>
+        <article className="info">
+          <h3>Info</h3>
+          <h6>Precio : €{price}</h6>
+          <h6>Tamaño : {size}m2</h6>
+          <h6>Capacidad : {
+            capacity > 1 ? `${capacity} personas` : `${capacity} persona`
+            }
+            </h6>
+            <h6>{pets ? "Se permiten mascotas":"Mascotas no permitidas"}</h6>
+            <h6>{breakfast && "Desayuno incluido"}</h6>
+        </article>
+      </div>    
+    </section>
+    <section className="room-extras">
+      <h6>Extras</h6>            
+      <ul className="extras">
+            {extras.map((item,index)=>{
+              return <li key={index}>- {item}</li>;
+            })}
+      </ul>
+    </section>
+    </>
   )
 }
