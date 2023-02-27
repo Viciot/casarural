@@ -23,7 +23,10 @@ componentDidMount(){
     rooms, 
     featuredRooms, 
     sortedRooms:rooms, 
-    loading:false
+    loading:false,
+    type:'all',
+    capacity:1,
+    
   })  
 }
 
