@@ -15,7 +15,17 @@ export default function RoomsFilter() {
      <Title title="Encuentra tu casa rural ideal" />
      <form className="filter-form">
       {/*select type */}
-      {/* */}
+      <div className="form-group">
+        <label htmlFor="type">Tipo de habitación</label>
+        <select 
+          name="type" 
+          id="type" 
+          value={type} 
+          className='form-control' 
+          onChange={handleChange}
+        />
+      </div>
+      {/* end select type*/}
      </form>
     </section>
   )
